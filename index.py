@@ -11,7 +11,7 @@ y_range = st.slider("Faixa de Movimento Vertical", 1, 1000, 500)
 interval = st.slider(
     "Intervalo de Tempo entre os Movimentos (segundos)", 1, 10, 3)
 
-processo = True
+processo = False
 
 # Cria um espaço vazio para mostrar as coordenadas
 coordenadas_texto = st.empty()
@@ -32,6 +32,7 @@ if stop_movement:
 
 # Inicia o movimento
 if start_movement:
+    processo = True
     while processo:
         x_offset, y_offset = pyautogui.position()
         x_offset = abs(random.randint(-x_range, x_range))
