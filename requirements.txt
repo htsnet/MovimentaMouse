@@ -1,3 +1,4 @@
 streamlit
 pyautogui
 mouseinfo
+os
