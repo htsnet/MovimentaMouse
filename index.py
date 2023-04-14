@@ -10,9 +10,9 @@ screenWidth, screenHeight = pyautogui.size()
 
 # Define as opções de configuração do movimento
 x_range = st.slider("Faixa de Movimento Horizontal",
-                    1, screenWidth, screenWidth * 0.9)
+                    1, screenWidth, int(screenWidth * 0.9))
 y_range = st.slider("Faixa de Movimento Vertical", 1,
-                    screenHeight, screenHeight * 0.9)
+                    screenHeight, int(screenHeight * 0.9))
 interval = st.slider(
     "Intervalo de Tempo entre os Movimentos (segundos)", 1, 10, 4)
 
@@ -47,3 +47,20 @@ if start_movement:
         coordenadas_texto.text(f"Movendo para ({x_offset}, {y_offset})")
         pyautogui.moveTo(x_offset, y_offset, duration=0.5)
         time.sleep(interval)
+
+
+# Inserir um bloco de código JavaScript
+codeAds = """
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '5dbb3d2317e91f9794cec12e6224d531',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/5dbb3d2317e91f9794cec12e6224d531/invoke.js"></scr' + 'ipt>');
+</script>
+    """
+
+st.markdown(codeAds, unsafe_allow_html=True)
