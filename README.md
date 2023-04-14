@@ -4,9 +4,9 @@ Date: 14/04/2023
 
 Veja es projeto em funcionamento em 
 
------- Instructions ------
+------ Instructions ------  
 pip install virtualenv  
 python -m venv Ambiente_Virtual  
-Ambiente_Virtual\Scripts\activate.bat
-pip install <packages> (ver a lista em requirements.txt)  
+Ambiente_Virtual\Scripts\activate.bat  
+pip install <packages> (ver a lista em requirements.txt)   
 streamlit run index.py    

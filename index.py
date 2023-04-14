@@ -5,11 +5,16 @@ import random
 
 st.title("Movimento Aleatório do Mouse")
 
+# returns the monitor size
+screenWidth, screenHeight = pyautogui.size()
+
 # Define as opções de configuração do movimento
-x_range = st.slider("Faixa de Movimento Horizontal", 1, 1000, 500)
-y_range = st.slider("Faixa de Movimento Vertical", 1, 1000, 500)
+x_range = st.slider("Faixa de Movimento Horizontal",
+                    1, screenWidth, screenWidth * 0.9)
+y_range = st.slider("Faixa de Movimento Vertical", 1,
+                    screenHeight, screenHeight * 0.9)
 interval = st.slider(
-    "Intervalo de Tempo entre os Movimentos (segundos)", 1, 10, 3)
+    "Intervalo de Tempo entre os Movimentos (segundos)", 1, 10, 4)
 
 processo = False
 
